@@ -28,6 +28,10 @@ class EditProfileVC: UIViewController, UIImagePickerControllerDelegate, UINaviga
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         print("Succeeded")
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
